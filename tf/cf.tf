@@ -15,9 +15,14 @@ resource "cloudflare_worker_script" "auth0_worker" {
     text = var.auth0_cname_api_key
   }
 
+  secret_text_binding {
+    name = "TENANT"
+    text = var.auth0_domain
+  }
+
   analytics_engine_binding {
-    name    = "WEATHER"
-    dataset = "WEATHER"
+    name    = "RATE_LIMIT"
+    dataset = "RATE_LIMIT"
   }
 }
 

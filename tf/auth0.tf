@@ -21,6 +21,6 @@ resource "auth0_client" "jwt_io" {
 }
 
 output "authorization_url" {
-  value = "https://${var.auth0_custom_domain}/authorize?client_id=${auth0_client.jwt_io.client_id}&connection=${local.connection}&response_type=id_token&redirect_uri=${local.jwt_io_url_encoded}&nonce=n1&state=s1&login_hint=${local.test_user}"
+  value = "https://${var.auth0_custom_domain}/authorize?client_id=${auth0_client.jwt_io.client_id}&connection=${local.connection}&response_type=id_token&redirect_uri=${local.jwt_io_url_encoded}&nonce=n1&state=s1&login_hint=${local.test_user}&prompt=login"
 }
 
