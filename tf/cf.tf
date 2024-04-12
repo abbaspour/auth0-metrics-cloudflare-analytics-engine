@@ -3,6 +3,7 @@ resource "cloudflare_worker_script" "auth0_worker" {
   name       = "custom-domain-analytics"
   content    = file("../worker.js")
   account_id = var.cloudflare_account_id
+  module     = true
 
   plain_text_binding {
     name = "AUTH0_EDGE_RECORD"
@@ -12,6 +13,11 @@ resource "cloudflare_worker_script" "auth0_worker" {
   secret_text_binding {
     name = "CNAME_API_KEY"
     text = var.auth0_cname_api_key
+  }
+
+  analytics_engine_binding {
+    name    = "WEATHER"
+    dataset = "WEATHER"
   }
 }
 

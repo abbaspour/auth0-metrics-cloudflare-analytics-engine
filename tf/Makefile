@@ -1,5 +1,5 @@
 PLAN_FILE=cf.plan
-WORKER_NAME=ae-cd # TODO: get from tf
+WORKER_NAME=custom-domain-analytics # TODO: get from tf
 
 main: plan
 
