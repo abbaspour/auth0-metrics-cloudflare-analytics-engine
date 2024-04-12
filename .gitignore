@@ -1,0 +1,6 @@
+.idea
+terraform.auto.tfvars
+terraform.tfstate*
+*.plan
+.terraform
+.terraform.lock.hcl
