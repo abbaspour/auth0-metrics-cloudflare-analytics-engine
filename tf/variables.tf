@@ -56,3 +56,9 @@ variable "auth0_cname_api_key" {
   description = "Auth0 custom domain cname-api-key"
   sensitive = true
 }
+
+variable "test_user" {
+  type = string
+  description = "test user email"
+  default = "amin@okta.com"
+}
