@@ -22,14 +22,32 @@ resource "aws_iam_policy" "s3_write_list_policy" {
           aws_s3_bucket.metrics-export.arn,
           "${aws_s3_bucket.metrics-export.arn}/*"
         ]
-      }
+      },
+      {
+        "Action" : [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ],
+        "Resource" : "arn:aws:logs:*:*:*",
+        "Effect" : "Allow"
+      },
     ]
   } )
 }
 
+locals {
+  lambda-name = "cf-analytics-engine-exporter"
+}
+
+resource "aws_cloudwatch_log_group" "log_group" {
+  name              = "/aws/lambda/${local.lambda-name}"
+  retention_in_days = 3
+}
+
 // Create CloudWatch Events rule for cron trigger
 resource "aws_cloudwatch_event_rule" "lambda_cron_trigger" {
-  name                = "lambda_cron_trigger"
+  name                = "${local.lambda-name}_cron_trigger"
   schedule_expression = "cron(* * * * ? *)" // Run every minute
 }
 
@@ -40,22 +58,29 @@ resource "aws_cloudwatch_event_target" "lambda_target" {
   arn       = aws_lambda_function.my_lambda_function.arn
 }
 
-data "archive_file" "lambda" {
-  type        = "zip"
-  source_file = "../lambda.js"
-  output_path = "lambda_function_payload.zip"
+resource "aws_lambda_permission" "allow_eventbridge" {
+  statement_id  = "AllowExecutionFromEventBridge"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.my_lambda_function.function_name
+  principal     = "events.amazonaws.com"
+  source_arn    = aws_cloudwatch_event_rule.lambda_cron_trigger.arn
 }
 
 // Create Lambda function
 resource "aws_lambda_function" "my_lambda_function" {
-  function_name = "my_lambda_function"
-  handler       = "lambda.handler"
-  runtime       = "nodejs20.x"
-  memory_size   = 128
-  timeout       = 60
-  role          = aws_iam_role.lambda_execution_role.arn
-  filename      = "lambda_function_payload.zip"
-  source_code_hash = data.archive_file.lambda.output_base64sha256
+  function_name    = local.lambda-name
+  handler          = "src/index.handler"
+  runtime          = "nodejs20.x"
+  memory_size      = 128
+  timeout          = 60
+  role             = aws_iam_role.lambda_execution_role.arn
+  filename         = "../lambda/lambda.zip"
+  source_code_hash = filebase64sha256("../lambda/lambda.zip")
+  environment {
+    variables = {
+      bucketName = aws_s3_bucket.metrics-export.bucket
+    }
+  }
 }
 
 // Attach policy to Lambda execution role
