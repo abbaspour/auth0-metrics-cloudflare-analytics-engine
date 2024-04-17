@@ -24,6 +24,12 @@ variable "cloudflare_workers_domain" {
   description = "workers domain"
 }
 
+variable "cloudflare_token" {
+  type = string
+  description = "token to read query WAE over SQL"
+  sensitive = true
+}
+
 ## auth0
 variable "auth0_domain" {
   type = string

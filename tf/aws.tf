@@ -79,6 +79,8 @@ resource "aws_lambda_function" "my_lambda_function" {
   environment {
     variables = {
       bucketName = aws_s3_bucket.metrics-export.bucket
+      CF_TOKEN = var.cloudflare_token
+      CF_ACCOUNT_ID = var.cloudflare_account_id
     }
   }
 }

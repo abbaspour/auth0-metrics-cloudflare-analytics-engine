@@ -1,0 +1,145 @@
+{
+	"meta":
+	[
+		{
+			"name": "timestamp",
+			"type": "DateTime"
+		},
+		{
+			"name": "path",
+			"type": "String"
+		},
+		{
+			"name": "limit",
+			"type": "Float64"
+		},
+		{
+			"name": "remaining",
+			"type": "Float64"
+		},
+		{
+			"name": "latency",
+			"type": "Float64"
+		},
+		{
+			"name": "status",
+			"type": "Float64"
+		},
+		{
+			"name": "tenant",
+			"type": "String"
+		},
+		{
+			"name": "_sample_interval",
+			"type": "UInt32"
+		}
+	],
+
+	"data":
+	[
+		{
+			"timestamp": "2024-04-17 05:15:22",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 251,
+			"status": 200,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:15:06",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 236,
+			"status": 200,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:55",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 269,
+			"status": 200,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:50",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 261,
+			"status": 200,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:44",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 247,
+			"status": 200,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:32",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 74,
+			"status": 429,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:32",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 150,
+			"status": 429,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:31",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 186,
+			"status": 200,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:31",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 92,
+			"status": 429,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		},
+		{
+			"timestamp": "2024-04-17 05:14:31",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99,
+			"latency": 115,
+			"status": 429,
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"_sample_interval": 1
+		}
+	],
+
+	"rows": 10,
+
+	"rows_before_limit_at_least": 310
+}
