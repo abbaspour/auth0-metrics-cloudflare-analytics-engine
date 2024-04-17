@@ -62,3 +62,8 @@ variable "test_user" {
   description = "test user email"
   default = "amin@okta.com"
 }
+
+## AWS
+variable "region" {
+  default = "ap-southeast-2"
+}

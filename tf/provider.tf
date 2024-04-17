@@ -8,6 +8,10 @@ terraform {
       source = "auth0/auth0"
       version = "~> 1.2"
     }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
   }
 }
 
@@ -21,4 +25,8 @@ provider "auth0" {
   domain = var.auth0_domain
   client_id = var.auth0_tf_client_id
   client_secret = var.auth0_tf_client_secret
+}
+
+provider "aws" {
+  region = var.region
 }

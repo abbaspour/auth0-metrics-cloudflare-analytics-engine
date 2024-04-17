@@ -5,3 +5,6 @@ terraform.tfstate*
 .terraform
 .terraform.lock.hcl
 .env
+node_modules
+pnpm-lock.yaml
+lambda_function_payload.zip
