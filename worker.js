@@ -8,14 +8,14 @@
  *  todo 1: consider cf-cache-status in response header
  *  todo 2: try/catch
  */
-function writeMetrics(env, path, limit, remaining, took) {
+function writeMetrics(env, path, limit, remaining, took, status) {
     if (limit === undefined || remaining === undefined) return;
 
-    console.log(`${env.TENANT}, ${path}, ${took}ms, ${limit}, ${remaining}`);
+    console.log(`${env.TENANT}, ${path}, ${status}, ${took}ms, ${limit}, ${remaining}`);
 
     env.RATE_LIMIT.writeDataPoint({
         'blobs': [path],
-        'doubles': [limit, remaining, took],
+        'doubles': [limit, remaining, took, status],
         'indexes': [env.TENANT]
     });
 }
@@ -34,7 +34,7 @@ export default {
         const ratelimit_remaining = response.headers.get('x-ratelimit-remaining');
         const ratelimit_limit = response.headers.get('x-ratelimit-limit');
 
-        writeMetrics(env, url.pathname, ratelimit_limit, ratelimit_remaining, took);
+        writeMetrics(env, url.pathname, ratelimit_limit, ratelimit_remaining, took, response.status);
 
         return response;
     }

@@ -51,6 +51,6 @@ fi
 
 [[ -z "${query}" ]] && { echo >&2 "ERROR: no query"; exit 2;}
 
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/${account_id}/analytics_engine/sql" \
+curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${account_id}/analytics_engine/sql" \
   -H "Authorization: Bearer ${token}" \
   -d "${query}"

@@ -1,0 +1,187 @@
+{
+	"meta":
+	[
+		{
+			"name": "ts",
+			"type": "DateTime"
+		},
+		{
+			"name": "tenant",
+			"type": "String"
+		},
+		{
+			"name": "path",
+			"type": "String"
+		},
+		{
+			"name": "limit",
+			"type": "Float64"
+		},
+		{
+			"name": "remaining",
+			"type": "Float64"
+		}
+	],
+
+	"data":
+	[
+		{
+			"ts": "2024-04-17 03:57:22",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:41",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:42",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:43",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:44",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:45",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:46",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:47",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:48",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:49",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:50",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:51",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:52",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 03:57:53",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 04:38:23",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 89
+		},
+		{
+			"ts": "2024-04-17 04:40:43",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 89
+		},
+		{
+			"ts": "2024-04-17 04:40:45",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 89
+		},
+		{
+			"ts": "2024-04-17 04:40:47",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 89
+		},
+		{
+			"ts": "2024-04-17 04:40:49",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 89
+		},
+		{
+			"ts": "2024-04-17 04:40:52",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 04:40:54",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		},
+		{
+			"ts": "2024-04-17 04:40:55",
+			"tenant": "cf-ae-metrics.au.auth0.com",
+			"path": "\/oauth\/token",
+			"limit": 100,
+			"remaining": 99
+		}
+	],
+
+	"rows": 22,
+
+	"rows_before_limit_at_least": 43
+}
